@@ -1,0 +1,18 @@
+
+class Vehiculo:
+    def __init__(self, marca, anio):
+        self.marca = marca
+        self.anio = anio
+
+class Auto(Vehiculo):
+    def __init__(self, marca, anio, puertas):
+        # Llama al constructor del padre pasándole los datos que le corresponden
+        super().__init__(marca, anio)
+        
+        # Guarda el atributo exclusivo de la clase hija
+        self.puertas = puertas
+
+# Prueba del código:
+mi_auto = Auto("Toyota", 2023, 4)
+print(mi_auto.marca, mi_auto.anio, mi_auto.puertas)
+# Salida esperada: Toyota 2023 4
